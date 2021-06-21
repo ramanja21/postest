@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Iframe</title>
+</head>
+<body>
+
+<button  onclick="postMessage()">Post Message to parent</button>
+
+<script type="text/javascript">
+	function postMessage(){
+
+		parent.postMessage("myevent", "*")
+	}
+	function receiveMessage(event)
+        {
+           alert("Recieved from Parent: "+event.data);
+        }
+
+        window.addEventListener("message", receiveMessage, false);
+
+</script>
+
+</body>
+</html>
