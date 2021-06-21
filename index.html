@@ -14,7 +14,9 @@
 	}
 	function receiveMessage(event)
         {
-           alert("Recieved from Parent: "+event.data);
+		if("test" === event.data){
+          		 alert("Recieved from Parent: "+event.data);
+		}
         }
 
         window.addEventListener("message", receiveMessage, false);
