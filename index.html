@@ -14,9 +14,9 @@
 	}
 	function receiveMessage(event)
         {
-		if("test" === event.data){
-          		 alert("Recieved from Parent: "+event.data);
-		}
+		
+          	console.log("Recieved from Parent: "+event.data);
+		
         }
 
         window.addEventListener("message", receiveMessage, false);
